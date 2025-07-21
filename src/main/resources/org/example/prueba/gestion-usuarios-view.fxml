@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.prueba.GestionUsuariosController">
+
+    <TextField fx:id="campoNombre" promptText="Nombre del usuario"/>
+    <TextField fx:id="campoCorreo" promptText="Correo electrónico"/>
+    <TextField fx:id="campoTelefono" promptText="Teléfono"/>
+    <TextField fx:id="campoIdentificacion" promptText="Nº Identificación"/>
+
+    <TableView fx:id="tablaUsuarios">
+        <columns>
+            <TableColumn fx:id="columnaNombre" text="Nombre"/>
+            <TableColumn fx:id="columnaCorreo" text="Correo"/>
+            <TableColumn fx:id="columnaTelefono" text="Teléfono"/>
+            <TableColumn fx:id="columnaIdentificacion" text="Identificación"/>
+            <TableColumn fx:id="columnaPrestamos" text="Préstamos Activos"/>
+            <TableColumn fx:id="columnaMulta" text="¿Multa?"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="10">
+        <Button text="Agregar Usuario" onAction="#agregarUsuario"/>
+        <Button text="Eliminar Usuario" onAction="#eliminarUsuario"/>
+        <Button text="Actualizar Usuario" onAction="#actualizarUsuario"/>
+        <Button text="Desbloquear Usuario" onAction="#desbloquearUsuario"/>
+        <Button text="Reducir Multas" onAction="#reducirMultas"/>
+    </HBox>
+
+</VBox>

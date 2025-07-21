@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="15" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.prueba.GestionLibrosController">
+
+    <TextField fx:id="campoBusqueda" promptText="Buscar libro..."/>
+    <Button text="Buscar" onAction="#buscarLibro"/>
+
+    <TableView fx:id="tablaLibros">
+        <columns>
+            <TableColumn fx:id="columnaTitulo" text="Título"/>
+            <TableColumn fx:id="columnaAutor" text="Autor"/>
+            <TableColumn fx:id="columnaEditorial" text="Editorial"/>
+            <TableColumn fx:id="columnaCantidad" text="Cantidad Disponible"/>
+        </columns>
+    </TableView>
+
+    <Label text="Agregar nuevo libro:"/>
+    <TextField fx:id="campoTitulo" promptText="Título"/>
+    <TextField fx:id="campoAutor" promptText="Autor"/>
+    <TextField fx:id="campoEditorial" promptText="Editorial"/>
+    <TextField fx:id="campoCantidad" promptText="Cantidad disponible"/>
+
+
+
+    <HBox spacing="10">
+        <Button text="Agregar Libro" onAction="#agregarLibro"/>
+        <Button text="Eliminar Libro" onAction="#eliminarLibro"/>
+        <Button text="Actualizar Libro" onAction="#actualizarLibro"/>
+    </HBox>
+
+</VBox>

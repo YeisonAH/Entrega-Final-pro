@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.prueba.GestionPrestamosController">
+
+    <ComboBox fx:id="comboUsuarios" promptText="Seleccionar Usuario" />
+    <ComboBox fx:id="comboLibros" promptText="Seleccionar Libro Disponible" />
+    <DatePicker fx:id="selectorFechaDevolucion" promptText="Fecha devolución (opcional)"/>
+
+    <Button onAction="#registrarPrestamo" text="Registrar Préstamo" />
+    <Button onAction="#devolverLibro" text="Devolver Libro" />
+
+    <TableView fx:id="tablaPrestamos">
+        <columns>
+            <TableColumn fx:id="columnaLibro" text="Libro" />
+            <TableColumn fx:id="columnaUsuario" text="Usuario" />
+            <TableColumn fx:id="columnaFechaPrestamo" text="Fecha Préstamo" />
+            <TableColumn fx:id="columnaFechaDevolucion" text="Fecha Devolución" />
+            <TableColumn fx:id="columnaEstado" text="Estado" />
+            <TableColumn fx:id="columnaMulta" text="Multa" />
+        </columns>
+    </TableView>
+
+</VBox>
